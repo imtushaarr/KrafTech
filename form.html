@@ -239,56 +239,75 @@
         /* Mobile View */
 @media (max-width: 768px) {
     #header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px;
     }
 
-    .left {
-        flex-direction: column;
-        align-items: flex-start;
+    #header img {
+        width: 60px;
     }
 
     .left ul {
-        display: block;
-        gap: 10px;
-        font-size: 18px;
-    }
-
-    .left ul li {
-        margin-bottom: 10px;
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        font-weight: 500;
+        font-size: 8px;
+        color: #000000;
+        margin: 0;
     }
 
     .left button {
-        margin-top: 10px;
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
+        padding: 3px 10px;
+        border: none;
+        border-radius: 50px;
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 7px;
+        cursor: pointer;
     }
 
     #form {
-        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 20px; */
+        padding: 0px 0px;
     }
 
     #form h2 {
-        font-size: 40px;
-        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 30px;
     }
 
     #form form {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+        margin: auto;
     }
 
     input, select {
-        font-size: 14px;
+        width: 150px;
+        padding: 5px;
+        font-size: 8px;
+        border: 1px solid #000000;
+        border-radius: 50px;
     }
 
-    input[type="submit"] {
-        padding: 12px;
-        font-size: 16px;
+
+    label {
+        margin-bottom: 5px;
+        font-size: 7px;
+        /* font-weight: bold; */
     }
-    }
+}
     </style>
     
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
