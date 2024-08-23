@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>FORM KRAFTECH COMMUNITY</title>
+    <link rel="shortcut icon" href="assets/KRAFDEV.png" type="image/x-icon">
+</head>
+<body>
+    <div id="header">
+        <div class="right">
+            <img src="assets/KRAFDEV 2.png" alt="">
+        </div>
+        <div class="left">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <a href="form.html"><button>FORM</button></a>
+        </div>
+    </div>
+
+    <div id="form">
+        <h2>Job Application Form</h2>
+        <form action="#" method="post" id="jobForm">
+
+            <!-- Job ID Number -->
+            <div class="form-group">
+                <label for="job-id">Job ID Number:</label>
+                <input type="text" id="job-id" name="job-id" placeholder="KFD0293" required>
+            </div>
+
+            <!-- Profile Name -->
+            <div class="form-group">
+                <label for="profile-name">Profile Name:</label>
+                <input type="text" id="profile-name" name="profile-name" placeholder="Software Engineer" required>
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+    
+            <!-- Phone Number with Country Code -->
+            <div class="form-group">
+                <label for="phone">Phone Number (with Country Code):</label>
+                <input type="tel" id="phone" name="phone" pattern="\+\d{1,3}\d{10}" placeholder="+911234567890" required>
+            </div>
+    
+            <!-- Gmail -->
+            <div class="form-group">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" pattern=".+@gmail\.com" placeholder="example@gmail.com" required>
+            </div>
+    
+            <!-- Gender -->
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+    
+            <!-- Options Tag -->
+            <div class="form-group">
+                <label for="options">Course</label>
+                <select id="options" name="options" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="option1">BE/BTECH</option>
+                    <option value="option2">MTECH</option>
+                    <option value="option3">MBA</option>
+                    <option value="option3">Others</option>
+                </select>
+            </div>
+    
+            <!-- University -->
+            <div class="form-group">
+                <label for="university">College/ University:</label>
+                <input type="text" id="university" name="university">
+            </div>
+    
+            <!-- Resume Upload -->
+            <div class="form-group">
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="footer">
+        <h6>&copy; 2024 KrafTech Community, Created By KrafTech Developers.</h6>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(255, 255, 255, 0.657);
+            font-family: 'Mukta', sans-serif;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 90px;
+        }
+
+        #header img {
+            width: 150px;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .left ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-weight: 500;
+            font-size: 20px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .left ul li {
+            cursor: pointer;
+        }
+
+        .left ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .left ul li a:hover {
+            color: #ff0000;
+        }
+
+        .left a {
+            text-decoration: none;
+        }
+
+        .left button {
+            padding: 8px 30px;
+            border: none;
+            border-radius: 50px;
+            background-color: #000000;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .left button:hover {
+            background-color: #ffffff;
+            color: #ff0000;
+            border: 1px solid red;
+        }
+
+        #footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            color: #ffffff;
+            height: 50px;
+            font-size: 22px;
+            font-weight: 200;
+            margin-top: 50px;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 20px; */
+            padding: 0px 60px;
+        }
+
+        #form h2 {
+            font-size: 70px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        #form form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            /* font-weight: bold; */
+        }
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #000000;
+            border-radius: 50px;
+        }
+        input[type="submit"] {
+            grid-column: span 2;
+            padding: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ffffff;
+            color: #ff0000;
+            border: 1px solid red;
+        }
+
+        /* Mobile View */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left ul {
+        display: block;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .left ul li {
+        margin-bottom: 10px;
+    }
+
+    .left button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #form {
+        padding: 0px 20px;
+    }
+
+    #form h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    #form form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+    }
+    </style>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="app.js"></script>
+
+
+</body>
+</html>
